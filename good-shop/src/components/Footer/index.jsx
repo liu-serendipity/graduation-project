@@ -1,11 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Box, Flex } from '@chakra-ui/react';
 
 export const Footer = () => {
   return (
-    <div>
-      <Link to='/home'>home</Link>
-      <Link to='/about'>about</Link>
-    </div>
+    <Flex>
+      <Link to='/'>
+        <Box>home</Box>
+      </Link>
+      <Link to='/mall'>
+        <Box>mall</Box>
+      </Link>
+      <Link to='/cart'>
+        <Box>cart</Box>
+      </Link>
+      <Link to='/about'>
+        <Box>about</Box>
+      </Link>
+    </Flex>
   );
 };
