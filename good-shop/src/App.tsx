@@ -3,7 +3,7 @@ import './App.css';
 
 import { BasicRoute } from './routes';
 import { useUserContext } from './hooks/useUserContext';
-import { Footer } from './components/Footer';
+import { Footer, SuspendButton } from './components';
 import { BrowserRouter } from 'react-router-dom';
 
 const basename = window.location.pathname.split('/v/')[0] + '/v/';
@@ -13,6 +13,7 @@ function App() {
   // return ready && <BasicRoute />;
   return (
     <BrowserRouter basename={basename}>
+      <SuspendButton />
       <Footer />
       <BasicRoute />
     </BrowserRouter>
