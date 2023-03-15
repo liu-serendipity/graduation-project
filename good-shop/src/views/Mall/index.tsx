@@ -1,7 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
-import { StarIcon, Search2Icon, DeleteIcon } from '@chakra-ui/icons';
-import { FONTSIZE } from '../../const';
 import { SearchBox, HotAndRecent } from './compoments';
 
 const Mall = () => {

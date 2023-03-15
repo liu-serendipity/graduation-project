@@ -28,7 +28,7 @@ const StyleBox = ({ children, link, Icon }: StyleBoxProps) => {
 
 export const Footer = () => {
   return (
-    <Box w={'100%'} pos={'fixed'} bottom={0} borderTop={'1px solid rgba(0, 0, 0, 0.2)'}>
+    <Box w={'100%'} pos={'fixed'} bottom={0} borderTop={'1px solid rgba(0, 0, 0, 0.2)'} bgColor={'#fff'}>
       <Flex justify={'space-around'}>
         {FOOTERTABS.map((item) => {
           return (
