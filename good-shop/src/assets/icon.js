@@ -2,7 +2,7 @@ export const IconIndex = ({ w = 200, h = 200, fill = '#333333' }) => {
   return (
     <svg
       t='1678771932001'
-      class='icon'
+      className='icon'
       viewBox='0 0 1024 1024'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
@@ -23,7 +23,7 @@ export const IconAbout = ({ w = 200, h = 200, fill = '#333333' }) => {
   return (
     <svg
       t='1678772054177'
-      class='icon'
+      className='icon'
       viewBox='0 0 1024 1024'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
@@ -44,7 +44,7 @@ export const IconMall = ({ w = 200, h = 200, fill = '#333333' }) => {
   return (
     <svg
       t='1678771870618'
-      class='icon'
+      className='icon'
       viewBox='0 0 1024 1024'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
@@ -65,7 +65,7 @@ export const IconCart = ({ w = 200, h = 200, fill = '#333333' }) => {
   return (
     <svg
       t='1678771982698'
-      class='icon'
+      className='icon'
       viewBox='0 0 1028 1024'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
