@@ -25,11 +25,17 @@ export const SearchBox = ({ onCollect }: SearchBoxProps) => {
       onCollect && onCollect(value);
       if (localStorage.getItem('good-shop-recent-search')) {
         const temp = JSON.parse(localStorage.getItem('good-shop-recent-search') || '[]');
+        const index = temp.indexOf(value);
+        if (index > 0) {
+          temp.splice(index, 1);
+        }
         temp.unshift(value);
         localStorage.setItem('good-shop-recent-search', JSON.stringify(temp));
       } else {
         localStorage.setItem('good-shop-recent-search', JSON.stringify([value]));
       }
+      handleCloseClick();
+      valueRef.current.blur();
     }
   };
 
