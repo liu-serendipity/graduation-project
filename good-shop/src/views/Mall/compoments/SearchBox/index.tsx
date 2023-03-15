@@ -26,7 +26,7 @@ export const SearchBox = ({ onCollect }: SearchBoxProps) => {
       if (localStorage.getItem('good-shop-recent-search')) {
         const temp = JSON.parse(localStorage.getItem('good-shop-recent-search') || '[]');
         const index = temp.indexOf(value);
-        if (index > 0) {
+        if (index >= 0) {
           temp.splice(index, 1);
         }
         temp.unshift(value);
