@@ -14,9 +14,9 @@ const StyleBox = ({ children, link, Icon }: StyleBoxProps) => {
     <NavLink to={link}>
       {({ isActive }) => (
         <Flex flexDir={'column'} alignItems={'center'} w='0.9rem' p={'0.05rem 0 0.06rem 0'}>
-          <Icon w='0.25rem' h='0.25rem' fill={isActive ? 'pink' : ''} />
+          <Icon w='0.25rem' h='0.25rem' fill={isActive ? 'red' : ''} />
           <Box mt='0.01rem'>
-            <Text fontSize={FONTSIZE.small} color={isActive ? 'pink' : ''}>
+            <Text fontSize={FONTSIZE.small} color={isActive ? 'red' : ''}>
               {children}
             </Text>
           </Box>
