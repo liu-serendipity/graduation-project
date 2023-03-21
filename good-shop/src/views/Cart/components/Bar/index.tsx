@@ -12,8 +12,7 @@ export const Bar = () => {
   };
 
   const jumpToMyLikes = () => {
-    // navigate('/favorite');
-    console.log('-----jumpToMyLikes-----缺少路由--------');
+    navigate('/favorite');
   };
 
   return (

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
-import { Bar, Info, MyOrder } from './components';
+import { ChevronLeftIcon, SettingsIcon } from '@chakra-ui/icons';
+import { Info, MyOrder } from './components';
+import { Bar } from '../../components/Bar';
 
 const About = () => {
   return (
     <Box>
-      <Bar />
+      <Bar LeftIcon={ChevronLeftIcon} RightIcon={SettingsIcon} leftLink={-1} rightLink={'/setting'} title={'我的'} />
       <Box w='100%' h='100vh' bgColor={'gray.100'}>
         <Info />
         <MyOrder />

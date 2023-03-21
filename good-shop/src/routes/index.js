@@ -9,6 +9,8 @@ const Card = lazy(() => import('../views/Card'));
 const Order = lazy(() => import('../views/Order'));
 const Service = lazy(() => import('../views/Service'));
 const Search = lazy(() => import('../views/Search'));
+const Favorite = lazy(() => import('../views/Favorite'));
+const Setting = lazy(() => import('../views/Setting'));
 
 const ToPay = lazy(() => import('../pages/ToPay'));
 const ToReceive = lazy(() => import('../pages/ToReceive'));
@@ -31,6 +33,8 @@ export const BasicRoute = () => {
         </Route>
         <Route path='/service' element={<Service />}></Route>
         <Route path='/search' element={<Search />}></Route>
+        <Route path='/favorite' element={<Favorite />}></Route>
+        <Route path='/setting' element={<Setting />}></Route>
       </Routes>
     </Suspense>
   );
