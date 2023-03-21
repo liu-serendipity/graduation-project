@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Flex, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { SearchIcon, CloseIcon } from '@chakra-ui/icons';
 import { FONTSIZE } from '../../../../const';
+import { useNavigate } from 'react-router-dom';
 
 interface SearchBoxProps {
   onCollect: (val: string) => void;
@@ -10,6 +11,7 @@ interface SearchBoxProps {
 export const SearchBox = ({ onCollect }: SearchBoxProps) => {
   const [value, setValue] = useState('');
   const valueRef: any = useRef(null);
+  const navigate = useNavigate();
 
   const handleValueChange = (event: any) => {
     setValue(event.target.value);
@@ -23,6 +25,7 @@ export const SearchBox = ({ onCollect }: SearchBoxProps) => {
   const onKeyup = (e: any) => {
     if (e.keyCode === 13 && value.trim()) {
       onCollect && onCollect(value);
+      navigate(`/search?q=${value}`);
       if (localStorage.getItem('good-shop-recent-search')) {
         const temp = JSON.parse(localStorage.getItem('good-shop-recent-search') || '[]');
         const index = temp.indexOf(value);

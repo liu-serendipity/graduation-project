@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { StarIcon, Search2Icon, DeleteIcon } from '@chakra-ui/icons';
 import { FONTSIZE } from '../../../../const';
+import { NavLink } from 'react-router-dom';
 
 interface HotAndRecentProps {
   searchValue: string;
@@ -32,10 +33,14 @@ export const HotAndRecent = ({ searchValue }: HotAndRecentProps) => {
           </Text>
         </Flex>
         <Flex flexWrap={'wrap'} ml='0.04rem'>
-          <Box bgColor={'pink.300'} w='fit-content' p='0.02rem 0.08rem' borderRadius={'0.14rem'} m='0.02rem'>
-            <Text fontSize={FONTSIZE.small} color={'#fff'}>
-              接口待接入
-            </Text>
+          <Box m='0.02rem'>
+            <NavLink to='/search'>
+              <Box bgColor={'pink.300'} w='fit-content' p='0.02rem 0.08rem' borderRadius={'0.14rem'}>
+                <Text fontSize={FONTSIZE.small} color={'#fff'}>
+                  接口待接入
+                </Text>
+              </Box>
+            </NavLink>
           </Box>
         </Flex>
       </Box>
@@ -53,17 +58,19 @@ export const HotAndRecent = ({ searchValue }: HotAndRecentProps) => {
           <Flex flexWrap={'wrap'} ml='0.04rem'>
             {recentSearch.map((item) => {
               return (
-                <Box
-                  key={item}
-                  bgColor={'pink.300'}
-                  w='fit-content'
-                  p='0.02rem 0.08rem'
-                  borderRadius={'0.14rem'}
-                  m='0.02rem'
-                >
-                  <Text fontSize={FONTSIZE.small} color={'#fff'}>
-                    {item}
-                  </Text>
+                <Box m='0.02rem' key={item}>
+                  <NavLink
+                    to={{
+                      pathname: '/search',
+                      search: `q=${item}`,
+                    }}
+                  >
+                    <Box bgColor={'pink.300'} w='fit-content' p='0.02rem 0.08rem' borderRadius={'0.14rem'}>
+                      <Text fontSize={FONTSIZE.small} color={'#fff'}>
+                        {item}
+                      </Text>
+                    </Box>
+                  </NavLink>
                 </Box>
               );
             })}

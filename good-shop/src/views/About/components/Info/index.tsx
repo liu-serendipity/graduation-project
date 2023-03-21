@@ -35,8 +35,7 @@ export const Info = () => {
   const navigate = useNavigate();
 
   const jumpToCard = () => {
-    // navigate('/card')
-    console.log('---------jumpToCard----------缺少路由----------');
+    navigate('/card');
   };
 
   return (
