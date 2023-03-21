@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { ICONS } from '../../../../const';
 import { FONTSIZE } from '../../../../const';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const { IconCustomerService, IconToComment, IconToPay, IconToReceive, IconMyOrder } = ICONS;
 
@@ -43,20 +43,26 @@ interface StyleBoxProps {
 }
 
 const StyleBox = ({ tab, Icon, needLine = false, iconColor, link }: StyleBoxProps) => {
+  const navigate = useNavigate();
+
+  const jumpToLink = (link: string) => {
+    navigate(`${link}`);
+  };
+
   return (
-    <Link to={link}>
-      <Flex flexDir={'column'} align={'center'} w='100%'>
+    <>
+      <Flex flexDir={'column'} align={'center'} w='100%' onClick={() => jumpToLink(link)}>
         <Icon w='0.28rem' h='0.28rem' fill={iconColor} />
         <Text fontSize={FONTSIZE.small}>{tab}</Text>
       </Flex>
-      {needLine && <Box borderLeft={'1px solid gray'} m='0.04rem 0.1rem'></Box>}
-    </Link>
+      {needLine && <Box borderLeft={'1px solid gray'} m='0.08rem 0.1rem'></Box>}
+    </>
   );
 };
 
 export const MyOrder = () => {
   return (
-    <Flex w='96%' bgColor={'#fff'} m='auto' my='0.12rem' borderRadius={'0.12rem'} p='0.08rem' justify={'space-around'}>
+    <Flex w='94%' bgColor={'#fff'} m='auto' my='0.12rem' borderRadius={'0.12rem'} p='0.08rem' justify={'space-around'}>
       {tabs.map((item, index) => {
         return (
           <StyleBox
