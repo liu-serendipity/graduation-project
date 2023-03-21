@@ -19,7 +19,7 @@ export const FONTSIZE = {
 export const FOOTERTABS = [
   {
     title: '首页',
-    link: '/',
+    link: '/home',
     Icon: IconIndex,
   },
   {
