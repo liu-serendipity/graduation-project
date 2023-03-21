@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
-import { Bar, Info } from './components';
+import { Bar, Info, MyOrder } from './components';
 
 const About = () => {
   return (
@@ -8,6 +8,7 @@ const About = () => {
       <Bar />
       <Box w='100%' h='100vh' bgColor={'gray.100'}>
         <Info />
+        <MyOrder />
       </Box>
     </Box>
   );

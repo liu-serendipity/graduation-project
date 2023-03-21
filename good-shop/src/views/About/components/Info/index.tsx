@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Avatar, Flex, Text, AspectRatio } from '@chakra-ui/react';
 import { ArrowRightIcon } from '@chakra-ui/icons';
+import { useNavigate } from 'react-router-dom';
 
 import { FONTSIZE } from '../../../../const';
 import head from '../../assets/head.jpg';
@@ -31,6 +32,13 @@ const arrowRightIconStyle = {
 };
 
 export const Info = () => {
+  const navigate = useNavigate();
+
+  const jumpToCard = () => {
+    // navigate('/card')
+    console.log('---------jumpToCard----------缺少路由----------');
+  };
+
   return (
     <AspectRatio ratio={1920 / 1080} w='100%'>
       <Box bgImage={head} bgSize={'contain'} bgRepeat={'no-repeat'} w='100%' h='100%'>
@@ -80,6 +88,7 @@ export const Info = () => {
           borderTopRadius={'0.12rem'}
           px='0.2rem'
           py='0.04rem'
+          onClick={() => jumpToCard()}
         >
           <Flex align={'center'}>
             <Text mr='0.04rem'>会员特权卡</Text>

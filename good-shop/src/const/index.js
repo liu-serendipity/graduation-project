@@ -1,4 +1,14 @@
-import { IconIndex, IconMall, IconCart, IconAbout } from '../assets/icon';
+import {
+  IconIndex,
+  IconMall,
+  IconCart,
+  IconAbout,
+  IconMyOrder,
+  IconToPay,
+  IconToComment,
+  IconToReceive,
+  IconCustomerService,
+} from '../assets/icon';
 
 export const FONTSIZE = {
   small: '0.14rem',
@@ -28,3 +38,15 @@ export const FOOTERTABS = [
     Icon: IconAbout,
   },
 ];
+
+export const ICONS = {
+  IconMyOrder,
+  IconToPay,
+  IconIndex,
+  IconMall,
+  IconCart,
+  IconAbout,
+  IconToReceive,
+  IconCustomerService,
+  IconToComment,
+};
