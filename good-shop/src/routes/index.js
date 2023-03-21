@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
+import Login from '../views/Login';
 const Home = lazy(() => import('../views/Home'));
 const About = lazy(() => import('../views/About'));
 const Cart = lazy(() => import('../views/Cart'));
@@ -20,7 +21,8 @@ export const BasicRoute = () => {
   return (
     <Suspense fallback={<div></div>}>
       <Routes>
-        <Route path='/' element={<Navigate to='/home' />}></Route>
+        <Route path='/' element={<Navigate to='/login' />}></Route>
+        <Route path='/login' element={<Login />}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/cart' element={<Cart />}></Route>
