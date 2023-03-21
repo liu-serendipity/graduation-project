@@ -51,7 +51,7 @@ export const HotAndRecent = ({ searchValue }: HotAndRecentProps) => {
         <Flex flexWrap={'wrap'} ml='0.04rem'>
           <Box m='0.02rem'>
             <NavLink to='/search'>
-              <Box bgColor={'pink.300'} w='fit-content' p='0.02rem 0.08rem' borderRadius={'0.14rem'}>
+              <Box bgColor={'#d81e06'} w='fit-content' p='0.02rem 0.08rem' borderRadius={'0.14rem'}>
                 <Text fontSize={FONTSIZE.small} color={'#fff'}>
                   接口待接入
                 </Text>
@@ -75,7 +75,7 @@ export const HotAndRecent = ({ searchValue }: HotAndRecentProps) => {
             {recentSearch.map((item) => {
               return (
                 <Box
-                  bgColor={'pink.300'}
+                  bgColor={'#d81e06'}
                   w='fit-content'
                   p='0.02rem 0.08rem'
                   borderRadius={'0.14rem'}

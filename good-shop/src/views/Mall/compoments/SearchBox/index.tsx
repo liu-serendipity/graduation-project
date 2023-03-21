@@ -57,7 +57,7 @@ export const SearchBox = ({ onCollect }: SearchBoxProps) => {
         h='0.36rem'
         pl='0.5rem'
         pr='0.5rem'
-        focusBorderColor='pink.300'
+        focusBorderColor='#d81e06'
         placeholder={'请输入商品内容'}
         fontSize={FONTSIZE.medium}
         ref={valueRef}
