@@ -16,6 +16,7 @@ const Setting = lazy(() => import('../pages/Setting'));
 const ToPay = lazy(() => import('../pages/ToPay'));
 const ToReceive = lazy(() => import('../pages/ToReceive'));
 const ToComment = lazy(() => import('../pages/ToComment'));
+const Register = lazy(() => import('../pages/Register'));
 
 export const BasicRoute = () => {
   return (
@@ -37,6 +38,7 @@ export const BasicRoute = () => {
         <Route path='/search' element={<Search />}></Route>
         <Route path='/favorite' element={<Favorite />}></Route>
         <Route path='/setting' element={<Setting />}></Route>
+        <Route path='/register' element={<Register />}></Route>
       </Routes>
     </Suspense>
   );
