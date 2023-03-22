@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 import { ChevronLeftIcon, SettingsIcon } from '@chakra-ui/icons';
-import { Info, MyOrder } from './components';
+import { Info, MyOrder, Applications } from './components';
 import { Bar } from '../../components/Bar';
 
 const About = () => {
@@ -11,6 +11,7 @@ const About = () => {
       <Box w='100%' h='100vh' bgColor={'gray.100'}>
         <Info />
         <MyOrder />
+        <Applications />
       </Box>
     </Box>
   );
