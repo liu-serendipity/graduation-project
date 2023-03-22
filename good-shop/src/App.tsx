@@ -2,21 +2,22 @@ import React from 'react';
 import './App.css';
 
 import { BasicRoute } from './routes';
-import { useUserContext } from './hooks/useUserContext';
 import { Footer, SuspendButton } from './components';
-import { BrowserRouter } from 'react-router-dom';
-
-const basename = window.location.pathname.split('/v/')[0] + '/v/';
+import { useLocation } from 'react-router-dom';
+import { isPathPartlyExisted, isPathShowSuspendButton } from './untils';
 
 function App() {
-  // const { ready } = useUserContext();
-  // return ready && <BasicRoute />;
+  const location = useLocation();
+  const path = location.pathname;
+  const isShowFooter = isPathPartlyExisted(path);
+  const isShowSuspendButton = isPathShowSuspendButton(path);
+
   return (
-    <BrowserRouter basename={basename}>
-      <SuspendButton />
-      <Footer />
+    <>
+      {isShowSuspendButton && <SuspendButton />}
+      {isShowFooter && <Footer />}
       <BasicRoute />
-    </BrowserRouter>
+    </>
   );
 }
 
