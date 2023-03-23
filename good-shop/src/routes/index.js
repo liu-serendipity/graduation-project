@@ -17,6 +17,13 @@ const ToPay = lazy(() => import('../pages/ToPay'));
 const ToReceive = lazy(() => import('../pages/ToReceive'));
 const ToComment = lazy(() => import('../pages/ToComment'));
 const Register = lazy(() => import('../pages/Register'));
+const FindAccount = lazy(() => import('../pages/FindAccount'));
+const Applications = lazy(() => import('../pages/Applications'));
+const FeedBack = lazy(() => import('../pages/FeedBack'));
+const GiftCard = lazy(() => import('../pages/GiftCard'));
+const PickCoupons = lazy(() => import('../pages/PickCoupons'));
+const VipStorage = lazy(() => import('../pages/VipStorage'));
+const Sign = lazy(() => import('../pages/Sign'));
 
 export const BasicRoute = () => {
   return (
@@ -39,6 +46,13 @@ export const BasicRoute = () => {
         <Route path='/favorite' element={<Favorite />}></Route>
         <Route path='/setting' element={<Setting />}></Route>
         <Route path='/register' element={<Register />}></Route>
+        <Route path='/findAccount' element={<FindAccount />}></Route>
+        <Route path='/applications' element={<Applications />}></Route>
+        <Route path='/feedback' element={<FeedBack />}></Route>
+        <Route path='/giftCard' element={<GiftCard />}></Route>
+        <Route path='/pickCoupons' element={<PickCoupons />}></Route>
+        <Route path='/vipStorage' element={<VipStorage />}></Route>
+        <Route path='/sign' element={<Sign />}></Route>
       </Routes>
     </Suspense>
   );
