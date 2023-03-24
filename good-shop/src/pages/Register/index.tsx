@@ -177,6 +177,7 @@ const Register = () => {
             w='0.8rem'
             onClick={() => handleRegister()}
             mt='0.14rem'
+            zIndex={1}
           >
             <Text fontSize={FONTSIZE.small} color={'red.500'}>
               立即注册
