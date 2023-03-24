@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
-  AspectRatio,
   Box,
   Flex,
   Image,
@@ -99,8 +98,9 @@ const Login = () => {
   return (
     <>
       <Box w='100%' h='100vh' bgColor={'red.500'} pos={'fixed'}>
-        <Bar title='良品铺子' fontColor='#fff' />
-        <Flex mt='1.6rem' flexDir={'column'} align={'center'}>
+        <Bar title='登 陆' fontColor='#fff' />
+        {/* 为什么不垂直居中？因为移动端键盘弹起来会把输入框遮挡，解决方法之一：mt: 1rem。 */}
+        <Flex flexDir={'column'} align={'center'} mt='1rem'>
           <Image src={signed_logo} w='1.2rem' />
           <Box
             fontSize={FONTSIZE.small}

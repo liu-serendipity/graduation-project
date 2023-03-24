@@ -24,6 +24,7 @@ const GiftCard = lazy(() => import('../pages/GiftCard'));
 const PickCoupons = lazy(() => import('../pages/PickCoupons'));
 const VipStorage = lazy(() => import('../pages/VipStorage'));
 const Sign = lazy(() => import('../pages/Sign'));
+const PrivacyAgreement = lazy(() => import('../pages/PrivacyAgreement'));
 
 export const BasicRoute = () => {
   return (
@@ -53,6 +54,7 @@ export const BasicRoute = () => {
         <Route path='/pickCoupons' element={<PickCoupons />}></Route>
         <Route path='/vipStorage' element={<VipStorage />}></Route>
         <Route path='/sign' element={<Sign />}></Route>
+        <Route path='/privacyAgreement' element={<PrivacyAgreement />}></Route>
       </Routes>
     </Suspense>
   );

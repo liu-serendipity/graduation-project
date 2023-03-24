@@ -13,6 +13,8 @@ interface BarProps {
   fontColor?: string;
   leftIconColor?: string;
   rightIconColor?: string;
+  leftClick?: () => void;
+  rightClick?: () => void;
 }
 
 export const Bar = ({
@@ -20,19 +22,33 @@ export const Bar = ({
   leftIconColor,
   RightIcon,
   rightIconColor,
-  leftLink = '/',
-  rightLink = '/',
+  leftLink,
+  rightLink,
+  leftClick,
+  rightClick,
   title,
   fontColor = '#fff',
 }: BarProps) => {
   const navigate = useNavigate();
 
   const handleLeftJump = () => {
-    navigate(leftLink);
+    leftClick
+      ? leftClick()
+      : leftLink
+      ? navigate(leftLink)
+      : () => {
+          return null;
+        };
   };
 
   const handleRightJump = () => {
-    navigate(rightLink);
+    rightClick
+      ? rightClick()
+      : rightLink
+      ? navigate(rightLink)
+      : () => {
+          return null;
+        };
   };
 
   return (
