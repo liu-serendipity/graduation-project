@@ -15,3 +15,12 @@ export const isPathShowSuspendButton = (path) => {
   if (pathRes[1] && arr.indexOf(`/${pathRes[1]}`) != -1) return true;
   return false;
 };
+
+// 延时
+export function sleep(time = 500) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
+}
