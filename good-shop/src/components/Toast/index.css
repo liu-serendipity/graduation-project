@@ -1,0 +1,56 @@
+@keyframes loadingRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.toast-comp-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: transparent;
+  pointer-events: auto;
+}
+.mask-allow-click {
+  pointer-events: none;
+}
+.toast-comp-text {
+  line-height: 20px;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #fff;
+  text-align: center;
+}
+.toast-comp-cont {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 99;
+}
+.toast-comp-type {
+  width: 37vw;
+}
+.toast-comp-type_icon {
+  width: 9.6vw;
+  height: 9.6vw;
+  margin: 0 auto;
+}
+.toast-comp-type_loading {
+  background: url('./img/loading-icon.png') no-repeat;
+  background-size: 100% 100%;
+  animation: loadingRotate 1s linear infinite;
+}
+.toast-comp-type_success {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMA8DAQ0GBP4LCggMBwIJBAIttdjAAAAINJREFUOMvdkUsOwyAMBbH5hUCauf9pK1SlohF438x2LPn52f09+8vUfiNb/gighj8FouEjYCUoQDXiBSD7pdcMiK7XC9wCFmlDO3T20Scgx287ne13pwDU89NOJ3g3maCmJDANqIGRtLj8oi1ed1GMdmcB7wXIYX8QdQZJiM5Em3smbyVICDCOrCqSAAAAAElFTkSuQmCC')
+    no-repeat;
+  background-size: 100% 100%;
+}

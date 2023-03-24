@@ -8,6 +8,14 @@ import {
   IconToComment,
   IconToReceive,
   IconCustomerService,
+  IconLike,
+  IconMemberBenfits,
+  IconSign,
+  IconFeedback,
+  IconVipStorage,
+  IconGiftCard,
+  IconPickCoupons,
+  IconApplications,
 } from '../assets/icon';
 
 export const FONTSIZE = {
@@ -49,4 +57,12 @@ export const ICONS = {
   IconToReceive,
   IconCustomerService,
   IconToComment,
+  IconLike,
+  IconMemberBenfits,
+  IconSign,
+  IconFeedback,
+  IconVipStorage,
+  IconGiftCard,
+  IconPickCoupons,
+  IconApplications,
 };

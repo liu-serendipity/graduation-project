@@ -21,7 +21,7 @@ export const Empty = () => {
         mt='0.4rem'
         align={'center'}
         justify={'center'}
-        bgColor={'pink.200'}
+        bgColor={'#d81e06'}
         w='1rem'
         h='0.38rem'
         borderRadius={'0.16rem'}

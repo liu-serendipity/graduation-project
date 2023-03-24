@@ -1,5 +1,5 @@
-import { Bar } from './Bar';
 import { Info } from './Info';
 import { MyOrder } from './MyOrder';
+import { Applications } from './Applications';
 
-export { Bar, Info, MyOrder };
+export { Info, MyOrder, Applications };
