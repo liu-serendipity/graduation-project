@@ -5,10 +5,11 @@ import { FONTSIZE } from '../../../../const';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 interface HotAndRecentProps {
-  searchValue: string;
+  searchValue?: string;
+  hotList?: [];
 }
 
-export const HotAndRecent = ({ searchValue }: HotAndRecentProps) => {
+export const HotAndRecent = ({ searchValue, hotList = [] }: HotAndRecentProps) => {
   const [recentSearch, setRecentSearch] = useState([]);
   const navigate = useNavigate();
 
@@ -40,38 +41,58 @@ export const HotAndRecent = ({ searchValue }: HotAndRecentProps) => {
   };
 
   return (
-    <Box bgColor={'gray.100'} p='0.08rem 0.2rem' mt='0.06rem' borderRadius={'0.16rem'}>
-      <Box color='gray.500'>
+    <Box mt='0.06rem'>
+      <Box
+        color='gray.500'
+        borderRadius={'0.16rem'}
+        bgColor={'#fff'}
+        w='3.6rem'
+        m='auto'
+        p='0.06rem 0.1rem'
+        fontSize={FONTSIZE.small}
+      >
         <Flex align={'center'}>
-          <StarIcon fontSize={FONTSIZE.small} />
-          <Text fontSize={FONTSIZE.medium} ml='0.04rem'>
-            热门搜索
-          </Text>
+          <StarIcon />
+          <Text ml='0.04rem'>热门搜索</Text>
         </Flex>
-        <Flex flexWrap={'wrap'} ml='0.04rem'>
-          <Box m='0.02rem'>
-            <NavLink to='/search'>
-              <Box bgColor={'#d81e06'} w='fit-content' p='0.02rem 0.08rem' borderRadius={'0.14rem'}>
+        <Flex flexWrap={'wrap'} w='3.4rem' pt='0.04rem' pl='0.08rem' pr='0.08rem'>
+          {hotList.map((item) => {
+            return (
+              <Box
+                bgColor={'#d81e06'}
+                w='fit-content'
+                p='0.02rem 0.08rem'
+                borderRadius={'0.14rem'}
+                m='0.02rem'
+                key={item}
+                onClick={() => handleRecentKeyClick(item)}
+              >
                 <Text fontSize={FONTSIZE.small} color={'#fff'}>
-                  接口待接入
+                  {item}
                 </Text>
               </Box>
-            </NavLink>
-          </Box>
+            );
+          })}
         </Flex>
       </Box>
       {recentSearch.length > 0 && (
-        <Box color='gray.500' mt='0.1rem'>
+        <Box
+          color='gray.500'
+          m='auto'
+          mt='0.08rem'
+          borderRadius={'0.16rem'}
+          bgColor={'#fff'}
+          w='3.6rem'
+          p='0.06rem 0.1rem'
+        >
           <Flex align={'center'} fontSize={FONTSIZE.small} justify={'space-between'}>
             <Flex align={'center'}>
               <Search2Icon />
-              <Text fontSize={FONTSIZE.medium} ml='0.04rem'>
-                最近搜索
-              </Text>
+              <Text ml='0.04rem'>最近搜索</Text>
             </Flex>
             <DeleteIcon onClick={handleDelete} />
           </Flex>
-          <Flex flexWrap={'wrap'} ml='0.04rem'>
+          <Flex flexWrap={'wrap'} w='3.4rem' pt='0.04rem' pl='0.08rem' pr='0.08rem'>
             {recentSearch.map((item) => {
               return (
                 <Box

@@ -9,7 +9,7 @@ import user_head from '../../assets/user_head.jpeg';
 
 const data = {
   headImage: user_head,
-  userName: '与你是一首歌',
+  userName: '与你是一首歌呜呜呜呜呜呜呜呜呜呜',
   discount_total: 520,
 };
 
@@ -50,14 +50,21 @@ export const Info = () => {
               pos={'absolute'}
               bottom={0}
               left={'0.4rem'}
+              p='0.08rem'
+              h='0.32rem'
               w='1.2rem'
-              h='0.36rem'
               backdropFilter={'blur(8px)'}
               borderRadius={'1.2rem'}
               justify={'center'}
               align={'center'}
             >
-              <Text fontSize={FONTSIZE.medium} color={'#fff'}>
+              <Text
+                fontSize={FONTSIZE.small}
+                color={'#fff'}
+                whiteSpace={'nowrap'}
+                textOverflow={'ellipsis'}
+                overflow={'hidden'}
+              >
                 {data.userName}
               </Text>
             </Flex>

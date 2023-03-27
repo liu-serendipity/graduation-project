@@ -53,7 +53,7 @@ export const SearchBox = ({ onCollect }: SearchBoxProps) => {
       />
       <Input
         pos={'relative'}
-        bgColor={'gray.100'}
+        bgColor={'#fff'}
         h='0.36rem'
         pl='0.5rem'
         pr='0.5rem'
