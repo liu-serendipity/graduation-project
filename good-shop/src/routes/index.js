@@ -25,6 +25,8 @@ const PickCoupons = lazy(() => import('../pages/PickCoupons'));
 const VipStorage = lazy(() => import('../pages/VipStorage'));
 const Sign = lazy(() => import('../pages/Sign'));
 const PrivacyAgreement = lazy(() => import('../pages/PrivacyAgreement'));
+const Activities = lazy(() => import('../pages/Activities'));
+const Community = lazy(() => import('../pages/Community'));
 
 export const BasicRoute = () => {
   return (
@@ -55,6 +57,8 @@ export const BasicRoute = () => {
         <Route path='/vipStorage' element={<VipStorage />}></Route>
         <Route path='/sign' element={<Sign />}></Route>
         <Route path='/privacyAgreement' element={<PrivacyAgreement />}></Route>
+        <Route path='/activities' element={<Activities />}></Route>
+        <Route path='/community' element={<Community />}></Route>
       </Routes>
     </Suspense>
   );

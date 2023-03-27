@@ -20,6 +20,11 @@ import {
   IconCardCenter,
   IconHeadSign,
   IconHeadNoSign,
+  IconFlashSale,
+  IconNew,
+  IconActivities,
+  IconHot,
+  IconCommunity,
 } from '../assets/icon';
 
 export const FONTSIZE = {
@@ -74,4 +79,9 @@ export const ICONS = {
   IconCardCenter,
   IconHeadSign,
   IconHeadNoSign,
+  IconFlashSale,
+  IconNew,
+  IconActivities,
+  IconHot,
+  IconCommunity,
 };

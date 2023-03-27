@@ -64,6 +64,39 @@ const Home = () => {
     },
   ];
 
+  const baseConfig3 = [
+    {
+      Component: ICONS.IconFlashSale,
+      title: '秒 · 杀',
+      link: '/mall',
+    },
+    {
+      Component: ICONS.IconNew,
+      title: '新品首发',
+      link: '/mall',
+    },
+    {
+      Component: ICONS.IconVipStorage,
+      title: '会员储值',
+      link: '/vipStorage',
+    },
+    {
+      Component: ICONS.IconHot,
+      title: '他们都在买',
+      link: '/mall',
+    },
+    {
+      Component: ICONS.IconActivities,
+      title: '更多活动',
+      link: '/activities',
+    },
+    {
+      Component: ICONS.IconCommunity,
+      title: '良品圈子',
+      link: '/community',
+    },
+  ];
+
   return (
     <Box w='100%' bgColor={'gray.100'} h='100vh'>
       <Flex
@@ -97,7 +130,7 @@ const Home = () => {
           })}
         </Flex>
       </Flex>
-      <Box bgColor={'#fff'} px='0.075rem' pt='0.6rem' pb='0.1rem'>
+      <Box bgColor={'#fff'} px='0.075rem' pt='0.46rem' pb='0.04rem' borderBottomRadius={'0.12rem'}>
         <Flex justify={'space-between'} align={'center'} pl='0.12rem' pr='0.12rem'>
           <Box>
             <Flex align={'center'}>
@@ -132,10 +165,37 @@ const Home = () => {
             })}
           </Flex>
         </Flex>
-        <Box pt='0.1rem'>
+        <Box pt='0.04rem'>
           <BannerSwiper bannerList={bannerList} />
         </Box>
       </Box>
+      <Flex
+        m='auto'
+        mt='0.1rem'
+        flexWrap={'wrap'}
+        w='3.6rem'
+        justify={'space-around'}
+        bgColor={'#fff'}
+        borderRadius={'0.12rem'}
+      >
+        {baseConfig3.map((item) => {
+          return (
+            <Flex
+              key={item.title}
+              onClick={() => jumpToWhere(item.link)}
+              flexDir={'column'}
+              align={'center'}
+              w='1.2rem'
+              p='0.1rem'
+            >
+              <item.Component w='0.28rem' h='0.28rem' />
+              <Text fontSize={FONTSIZE.small} color={'#424242'}>
+                {item.title}
+              </Text>
+            </Flex>
+          );
+        })}
+      </Flex>
     </Box>
   );
 };
