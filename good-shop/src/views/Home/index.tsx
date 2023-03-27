@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Flex, Center, Text, Image } from '@chakra-ui/react';
-import { ICONS } from '../../const';
+import { ICONS, FONTSIZE } from '../../const';
 import { useNavigate } from 'react-router-dom';
-import { BannerSwiper } from './components';
-import { FONTSIZE } from '../../const';
+import { BannerSwiper, Recommend } from './components';
 import logo from '../../assets/img/logo.png';
 
 import p1 from './img/p1.jpg';
@@ -98,7 +97,7 @@ const Home = () => {
   ];
 
   return (
-    <Box w='100%' bgColor={'gray.100'} h='100vh'>
+    <Box w='100%' bgColor={'gray.100'} pb='0.58rem'>
       <Flex
         bgColor={'rgb(216, 30, 6)'}
         px='0.12rem'
@@ -196,6 +195,7 @@ const Home = () => {
           );
         })}
       </Flex>
+      <Recommend />
     </Box>
   );
 };

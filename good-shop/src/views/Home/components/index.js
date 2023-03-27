@@ -1,3 +1,4 @@
 import { BannerSwiper } from './BannerSwpier';
+import { Recommend } from './Recommend';
 
-export { BannerSwiper };
+export { BannerSwiper, Recommend };

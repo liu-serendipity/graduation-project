@@ -25,6 +25,7 @@ import {
   IconActivities,
   IconHot,
   IconCommunity,
+  IconPistachio,
 } from '../assets/icon';
 
 export const FONTSIZE = {
@@ -32,6 +33,7 @@ export const FONTSIZE = {
   small: '0.14rem',
   medium: '0.16rem',
   big: '0.18rem',
+  bbig: '0.2rem',
 };
 
 export const FOOTERTABS = [
@@ -84,4 +86,5 @@ export const ICONS = {
   IconActivities,
   IconHot,
   IconCommunity,
+  IconPistachio,
 };
