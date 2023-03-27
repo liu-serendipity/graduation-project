@@ -91,7 +91,15 @@ export default {
   SHORT,
   LONG: 8,
   show(content, duration, mask) {
-    return notice(content, 'info', duration, () => {}, mask);
+    return notice(
+      content,
+      'info',
+      duration,
+      () => {
+        return null;
+      },
+      mask,
+    );
   },
   info(content, duration, onClose, mask) {
     return notice(content, 'info', duration, onClose, mask);

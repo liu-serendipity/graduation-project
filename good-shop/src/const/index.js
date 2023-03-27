@@ -16,9 +16,14 @@ import {
   IconGiftCard,
   IconPickCoupons,
   IconApplications,
+  IconCoin,
+  IconCardCenter,
+  IconHeadSign,
+  IconHeadNoSign,
 } from '../assets/icon';
 
 export const FONTSIZE = {
+  ssmall: '0.12rem',
   small: '0.14rem',
   medium: '0.16rem',
   big: '0.18rem',
@@ -65,4 +70,8 @@ export const ICONS = {
   IconGiftCard,
   IconPickCoupons,
   IconApplications,
+  IconCoin,
+  IconCardCenter,
+  IconHeadSign,
+  IconHeadNoSign,
 };
