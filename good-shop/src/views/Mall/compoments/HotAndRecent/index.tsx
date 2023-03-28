@@ -6,7 +6,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 interface HotAndRecentProps {
   searchValue?: string;
-  hotList?: [];
+  hotList?: any[];
 }
 
 export const HotAndRecent = ({ searchValue, hotList = [] }: HotAndRecentProps) => {
@@ -41,7 +41,7 @@ export const HotAndRecent = ({ searchValue, hotList = [] }: HotAndRecentProps) =
   };
 
   return (
-    <Box mt='0.06rem'>
+    <>
       <Box
         color='gray.500'
         borderRadius={'0.16rem'}
@@ -113,6 +113,6 @@ export const HotAndRecent = ({ searchValue, hotList = [] }: HotAndRecentProps) =
           </Flex>
         </Box>
       )}
-    </Box>
+    </>
   );
 };

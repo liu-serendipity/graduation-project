@@ -9,7 +9,7 @@ export const SuspendButton99 = () => {
     navigate('/mall');
   };
   return (
-    <Box w='0.6rem' h='0.6rem' position={'fixed'} top='50%' left={'0'} onClick={() => handleJump()} zIndex={99}>
+    <Box w='0.6rem' h='0.6rem' position={'fixed'} top='40%' left={'0'} onClick={() => handleJump()} zIndex={99}>
       <Image src={button} w='100%' />
     </Box>
   );
