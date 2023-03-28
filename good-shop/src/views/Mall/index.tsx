@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Box } from '@chakra-ui/react';
 import { SearchBox, HotAndRecent } from './compoments';
 
 const Mall = () => {

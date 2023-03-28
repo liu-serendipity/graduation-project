@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { ChevronLeftIcon, StarIcon } from '@chakra-ui/icons';
 import { Empty, Full } from './components';
-import { Bar } from '../../components/Bar';
+import { Bar } from '../../components';
 
 const data = [];
 

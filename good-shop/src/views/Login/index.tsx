@@ -13,13 +13,13 @@ import {
 } from '@chakra-ui/react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { FONTSIZE } from '../../const';
-import signed_logo from './assets/signed_logo.png';
-import { Bar } from '../../components/Bar';
-import footer from './assets/footer.gif';
+import { Bar, Toast } from '../../components';
 import { useNavigate } from 'react-router-dom';
 import { keyframes } from '@emotion/css';
-import { Toast } from '../../components';
 import { sleep } from '../../untils';
+
+import signed_logo from './assets/signed_logo.png';
+import footer from './assets/footer.gif';
 
 const shake = keyframes`
   10%, 90% { transform: translate3d(-1px, 0, 0); }

@@ -3,6 +3,7 @@ import { Box, Flex, Center, Text, Image } from '@chakra-ui/react';
 import { ICONS, FONTSIZE } from '../../const';
 import { useNavigate } from 'react-router-dom';
 import { BannerSwiper, Recommend } from './components';
+
 import logo from '../../assets/img/logo.png';
 
 import p1 from './img/p1.jpg';

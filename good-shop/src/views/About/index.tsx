@@ -2,7 +2,8 @@ import React from 'react';
 import { Box, AspectRatio, Image } from '@chakra-ui/react';
 import { ChevronLeftIcon, SettingsIcon } from '@chakra-ui/icons';
 import { Info, MyOrder, Applications } from './components';
-import { Bar } from '../../components/Bar';
+import { Bar } from '../../components';
+
 import main from './assets/main.jpg';
 
 const About = () => {
