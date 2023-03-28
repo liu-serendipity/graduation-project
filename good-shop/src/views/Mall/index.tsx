@@ -15,6 +15,7 @@ const list = [
     good_comment_percent: '98%',
     vip_price: null,
     price_unity: '¥',
+    goods_id: 1111,
   },
   {
     pic: 'https://m.360buyimg.com/n1/s440x440_jfs/t1/104437/31/37682/205331/64218699F8031ea57/0b34e7603297fa74.jpg',
@@ -28,6 +29,7 @@ const list = [
     good_comment_percent: '98%',
     vip_price: null,
     price_unity: '¥',
+    goods_id: 1112,
   },
   {
     pic: 'https://m.360buyimg.com/n1/s440x440_jfs/t1/126700/3/30590/202650/641a59d8F468fc9c6/091b914c0c922759.jpg',
@@ -41,6 +43,7 @@ const list = [
     good_comment_percent: '98%',
     vip_price: 6800,
     price_unity: '¥',
+    goods_id: 1113,
   },
   {
     pic: 'https://m.360buyimg.com/n1/s440x440_jfs/t1/184756/36/33075/138205/64071034F92493537/bc97af6850f574d9.jpg',
@@ -54,6 +57,7 @@ const list = [
     good_comment_percent: '99%',
     vip_price: null,
     price_unity: '¥',
+    goods_id: 1114,
   },
   {
     pic: 'https://m.360buyimg.com/n1/s440x440_jfs/t1/130841/15/34259/189712/64114214Fd1e5ba5a/3ad33b63e5a3f718.jpg',
@@ -67,6 +71,7 @@ const list = [
     good_comment_percent: '97%',
     vip_price: null,
     price_unity: '¥',
+    goods_id: 1115,
   },
   {
     pic: 'https://m.360buyimg.com/n1/s440x440_jfs/t1/139808/7/30417/238876/6412ec72Fcfb50f76/97fc4e23b124a9d6.jpg',
@@ -80,6 +85,7 @@ const list = [
     good_comment_percent: '98%',
     vip_price: null,
     price_unity: '¥',
+    goods_id: 1116,
   },
   {
     pic: 'https://m.360buyimg.com/n1/s440x440_jfs/t1/166456/12/35299/248607/642184ceF8ef5258b/1b070a40afecc699.jpg',
@@ -93,6 +99,7 @@ const list = [
     good_comment_percent: '98%',
     vip_price: null,
     price_unity: '¥',
+    goods_id: 1117,
   },
   {
     pic: 'https://m.360buyimg.com/n1/s440x440_jfs/t1/212007/36/27427/230099/6422421cFdc9ad1b1/5013e6c17c256b0d.jpg',
@@ -106,6 +113,7 @@ const list = [
     good_comment_percent: '98%',
     vip_price: null,
     price_unity: '¥',
+    goods_id: 1118,
   },
   {
     pic: 'https://m.360buyimg.com/n1/s440x440_jfs/t1/165290/10/32639/178981/6414303cFe2b62db9/103e051119fd4302.jpg',
@@ -119,6 +127,7 @@ const list = [
     good_comment_percent: '99%',
     vip_price: 3500,
     price_unity: '¥',
+    goods_id: 1119,
   },
   {
     pic: 'https://m.360buyimg.com/n1/s440x440_jfs/t1/91755/5/33308/225641/641b2284Fdee0f7c6/b8c30cbca7a94ffd.jpg',
@@ -132,6 +141,7 @@ const list = [
     good_comment_percent: '98%',
     vip_price: null,
     price_unity: '¥',
+    goods_id: 1120,
   },
 ];
 

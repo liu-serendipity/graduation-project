@@ -27,6 +27,7 @@ const Sign = lazy(() => import('../pages/Sign'));
 const PrivacyAgreement = lazy(() => import('../pages/PrivacyAgreement'));
 const Activities = lazy(() => import('../pages/Activities'));
 const Community = lazy(() => import('../pages/Community'));
+const GoodsDetail = lazy(() => import('../pages/GoodsDetail'));
 
 export const BasicRoute = () => {
   return (
@@ -59,6 +60,7 @@ export const BasicRoute = () => {
         <Route path='/privacyAgreement' element={<PrivacyAgreement />}></Route>
         <Route path='/activities' element={<Activities />}></Route>
         <Route path='/community' element={<Community />}></Route>
+        <Route path='/goodsDetail' element={<GoodsDetail />}></Route>
       </Routes>
     </Suspense>
   );
