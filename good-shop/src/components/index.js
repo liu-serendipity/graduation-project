@@ -5,5 +5,6 @@ import { SuspendButton99 } from './SuspendButton99';
 import { Bar } from './Bar';
 import { InputBox } from './InputBox';
 import { GoodsCard } from './GoodsCard';
+import { ImageView } from './ImageView';
 
-export { Footer, SuspendButton, Toast, SuspendButton99, Bar, InputBox, GoodsCard };
+export { Footer, SuspendButton, Toast, SuspendButton99, Bar, InputBox, GoodsCard, ImageView };
