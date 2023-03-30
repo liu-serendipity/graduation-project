@@ -14,6 +14,8 @@ interface IProps {
   spinButton?: boolean;
   // 是否显示全屏显示按钮
   fullScreenButton?: boolean;
+  // 搭配swiper
+  isSwiper: boolean;
   // 当预览图片列表索引发生变化
   indexChange?: (index: number) => void;
   // 关闭图片预览
@@ -52,6 +54,7 @@ export const ImageView: FunctionComponent<IProps> = (props) => {
     isImageViewer = false,
     spinButton = true,
     fullScreenButton = true,
+    isSwiper = false,
     indexChange = () => {
       return null;
     },
@@ -89,7 +92,9 @@ export const ImageView: FunctionComponent<IProps> = (props) => {
         onIndexChange={(index: number) => {
           indexChange(index);
           // 搭配swiper用法
-          swiper.slideTo && swiper.slideTo(index);
+          if (isSwiper) {
+            swiper.slideTo(index);
+          }
         }}
         onClose={() => {
           toCloseView();

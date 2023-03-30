@@ -26,6 +26,7 @@ import {
   IconHot,
   IconCommunity,
   IconPistachio,
+  IconHeart,
 } from '../assets/icon';
 
 export const FONTSIZE = {
@@ -87,4 +88,5 @@ export const ICONS = {
   IconHot,
   IconCommunity,
   IconPistachio,
+  IconHeart,
 };

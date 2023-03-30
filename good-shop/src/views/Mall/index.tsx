@@ -162,7 +162,7 @@ const Mall = () => {
   }, []);
 
   return (
-    <Box w='100%' bgColor={'gray.100'} pb='0.58rem'>
+    <Box w='100%' bgColor={'gray.100'} pb='0.64rem'>
       <Flex
         bgColor={'red.500'}
         justify='center'
