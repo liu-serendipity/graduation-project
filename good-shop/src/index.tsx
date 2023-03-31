@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { UserProvider } from './contexts/User';
+import { HomeProvider } from './contexts/Home';
+import { MallProvider } from './contexts/Mall';
+import { CartProvider } from './contexts/Cart';
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -13,13 +16,19 @@ const basename = window.location.pathname.split('/v/')[0] + '/v/';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <UserProvider>
-      <ChakraProvider>
-        <BrowserRouter basename={basename}>
-          <App />
-        </BrowserRouter>
-      </ChakraProvider>
-    </UserProvider>
+    <HomeProvider>
+      <MallProvider>
+        <CartProvider>
+          <UserProvider>
+            <ChakraProvider>
+              <BrowserRouter basename={basename}>
+                <App />
+              </BrowserRouter>
+            </ChakraProvider>
+          </UserProvider>
+        </CartProvider>
+      </MallProvider>
+    </HomeProvider>
   </React.StrictMode>,
 );
 

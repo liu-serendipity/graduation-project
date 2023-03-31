@@ -1,13 +1,9 @@
 import React from 'react';
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { FONTSIZE, ICONS } from '../../../../const';
+import { NavLink } from 'react-router-dom';
 
-import p1 from './img/p1.jpg';
-import p2 from './img/p2.jpg';
-
-const data = [p1, p2];
-
-export const Recommend = () => {
+export const Recommend = ({ recommendList = [] }: any) => {
   return (
     <Box w='3.6rem' m='auto' mt='0.1rem'>
       <Flex bgColor={'#fff'} borderRadius={'0.12rem'} p='0.08rem 0.2rem' justify={'space-between'} align={'center'}>
@@ -24,11 +20,19 @@ export const Recommend = () => {
         </Box>
         <ICONS.IconPistachio w='0.6rem' h='0.6rem' />
       </Flex>
-      {data.map((item, index) => {
+      {recommendList.map((item: any) => {
         return (
-          <Box key={item} mt='0.08rem'>
-            <Image src={item} w='100%' />
-          </Box>
+          <NavLink
+            key={item.pic}
+            to={{
+              pathname: '/goodsDetail',
+              search: `goods_id=${item.goods_id}`,
+            }}
+          >
+            <Box mt='0.08rem'>
+              <Image src={item.pic} w='100%' />
+            </Box>
+          </NavLink>
         );
       })}
     </Box>

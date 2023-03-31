@@ -42,29 +42,17 @@ export const GoodsCard = (item: any) => {
                 {(item.item.normal_price / 100).toFixed(2)}
               </Text>
             </Box>
-            <>
-              {item.item.vip_price ? (
-                <Flex ml='0.06rem' align={'center'}>
-                  <Text fontSize={FONTSIZE.ssmall} color={'#424242'} fontWeight={'bold'}>
-                    {item.item.price_unity}
-                    {(item.item.vip_price / 100).toFixed(2)}
-                  </Text>
-                  <Box w='0.36rem'>
-                    <Image src={vip} w='100%' />
-                  </Box>
-                </Flex>
-              ) : (
-                item.item?.label?.map((l: string, i: number) => {
-                  return (
-                    <Box key={i} ml='0.04rem' border={'1px solid red'} borderRadius={'0.06rem'} px='0.04rem'>
-                      <Text fontSize={FONTSIZE.ssmall} color={'red.400'}>
-                        {l}
-                      </Text>
-                    </Box>
-                  );
-                })
-              )}
-            </>
+            {item.item.vip_price && (
+              <Flex ml='0.06rem' align={'center'}>
+                <Text fontSize={FONTSIZE.ssmall} color={'#424242'} fontWeight={'bold'}>
+                  {item.item.price_unity}
+                  {(item.item.vip_price / 100).toFixed(2)}
+                </Text>
+                <Box w='0.36rem'>
+                  <Image src={vip} w='100%' />
+                </Box>
+              </Flex>
+            )}
           </Flex>
           <Flex align={'center'} color={'#848689'}>
             <Text fontSize={FONTSIZE.ssmall} mr='0.1rem'>

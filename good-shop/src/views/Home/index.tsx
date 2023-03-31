@@ -3,22 +3,9 @@ import { Box, Flex, Center, Text, Image } from '@chakra-ui/react';
 import { ICONS, FONTSIZE } from '../../const';
 import { useNavigate } from 'react-router-dom';
 import { BannerSwiper, Recommend } from './components';
+import { useHomeContext } from '../../hooks/useHomeContext';
 
 import logo from '../../assets/img/logo.png';
-
-import p1 from './img/p1.jpg';
-import p2 from './img/p2.jpg';
-
-const bannerList = [
-  {
-    pic: p1,
-    link: '/mall',
-  },
-  {
-    pic: p2,
-    link: '/mall',
-  },
-];
 
 const vipInfo = {
   integral: 520,
@@ -27,6 +14,7 @@ const vipInfo = {
 
 const Home = () => {
   const navigate = useNavigate();
+  const { bannerList, recommendList } = useHomeContext();
 
   const jumpToWhere = (target?: string) => {
     target
@@ -109,7 +97,7 @@ const Home = () => {
         w='100%'
         borderBottom={'1px solid rgba(0,0,0,0.1)'}
       >
-        <Box w='0.8rem' onClick={() => jumpToWhere('/home')}>
+        <Box w='0.8rem'>
           <Image src={logo} w='100%' />
         </Box>
         <Flex>
@@ -196,7 +184,7 @@ const Home = () => {
           );
         })}
       </Flex>
-      <Recommend />
+      <Recommend recommendList={recommendList} />
     </Box>
   );
 };
